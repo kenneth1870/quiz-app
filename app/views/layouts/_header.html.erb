@@ -1,0 +1,20 @@
+<header>
+  <nav class="light-green darken-1 nav-wrapper" role="navigation">
+    <div class="nav-wrapper container">
+      <a href="<%= root_path %>" class="brand-logo pl-2">QUIZ-APP</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+      <% unless request.path != "/questionarie" %>
+        <% if user_signed_in? %>
+          <li><a href="<%= root_path %>">Forms</a></li>
+          <li> <%= link_to 'Edit profile', edit_user_registration_path %></li>
+          <li> <%= link_to "Logout " + current_user.email, destroy_user_session_path, method: :delete, title: "Click to logout" %></li>
+        <% else %>
+          <%= link_to "Sign up", new_user_registration_path %> |
+          <%= link_to "Login", new_user_session_path %>
+        <% end %>
+      <% end %>
+
+      </ul>
+    </div>
+  </nav>
+</header>

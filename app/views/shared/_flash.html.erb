@@ -1,0 +1,4 @@
+<% flash.each do |f| %>
+    <% type = f[0].to_s %>
+    toastr['<%= type %>']('<%= f[1] %>');
+<% end %>

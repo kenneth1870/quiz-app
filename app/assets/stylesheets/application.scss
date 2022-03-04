@@ -1,0 +1,27 @@
+@import "https://fonts.googleapis.com/icon?family=Material+Icons";
+
+@import "materialize/components/color-variables";
+$primary-color: color("blue", "lighten-2") !default;
+$secondary-color: color("teal", "lighten-2") !default;
+@import 'materialize';
+
+@import "materialize/extras/nouislider";
+@import "forms";
+@import "errors";
+
+.page-footer{
+  padding-top: 0;
+}
+
+select {
+    display: block;
+}
+
+.card .card-action label {
+  margin-left: 0.5em;
+  vertical-align: text-top;
+}
+
+.card .login-wrapper, .card-content, .material-table{
+  margin-top: 2em;
+}
